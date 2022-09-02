@@ -494,12 +494,12 @@ width: 600px;
 }
 
 .articles .box:hover .info i{
-    animation-name: icon;
+    animation-name: icone;
     animation-duration: 0.8s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
 }
-@keyframes icon{
+@keyframes icone{
 100%{
     transform: translateX(8px);
 }
