@@ -9,6 +9,7 @@
 :root{
     --main-color:#2196f3;
     --color-tow:#1787e0;
+    --section-color:#ececec;
     --main-transition:0.3s;
     --main-padding-top:100px;
     --main-padding-bottom:100px;
@@ -327,7 +328,7 @@ a{
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #ececec;
+    background-color: var(--section-color);
     position: absolute;
     z-index: -1;
     transform: skewY(-6deg);
@@ -528,7 +529,7 @@ width: 600px;
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    background-color: #ececec;
+    background-color: var(--section-color);
 }
 
 .gallery .container{
@@ -757,7 +758,7 @@ background-position: right top;
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     position: relative;
-    background-color: white;
+    background-color: var(--section-color);
 }
 
 .testimonials .container{
@@ -769,15 +770,16 @@ background-position: right top;
     box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
     border-radius: 10px;
     position: relative;
+    background-color: white;
 }
 .testimonials .box img{
     padding: 10px;
     position: absolute;
     right: -10px;
-    width: 90px;
+    width: 100px;
     top: -50px;
     border-radius: 50%;
-    background-color: #ececec;
+    background-color: var(--section-color);
 }
 .testimonials .box h3{
     padding: 10px;
@@ -788,6 +790,7 @@ background-position: right top;
 .testimonials .box .title{
     margin: 0 10px;
     font-weight: 600;
+    color: #4a768b;
 }
 .testimonials .box .rate{
     padding: 10px 20px;
@@ -796,10 +799,106 @@ background-position: right top;
     padding: 10px;
     font-size: 17px;
     font-weight: normal;
+    color: #777;
 }
 
 .testimonials .box .rate .filled{
     color: #ffc107;
 }
 
+
 /* End TESTIMONIALS  */
+
+/* start TEAM MEMBERS */
+.team{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative; 
+}
+.team .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.team .box{
+    position: relative;
+}
+.team .box::before,
+.team .box::after{
+    content: "";
+    background-color: #f3f3f3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+
+.team .box::before{
+    width: calc(100% - 60px);
+    z-index: -2;
+}
+.team .box::after{
+    z-index: -1;
+    background-color:#e4e4e4 ;
+    width: 0;
+}
+.team .box:hover::after{
+    width: calc(100% - 60px);
+    
+}
+.team .box .data img{
+    max-width:calc(100% - 60px);
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+.team .box .data:hover img{
+    filter: grayscale(100%);
+}
+
+.team .box .data{
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.team .box .data .cotiol{
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team .box .data .cotiol a{
+    width: 60px;
+    height: 30px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team .box .data .cotiol i{
+    color: #777;
+    transition: var(--main-transition);
+}
+
+.team .box .data .cotiol a:hover i{
+    color: var(--main-color);
+}
+
+.team .box .info{
+    padding: 20px 0 20px 75px;
+}
+.team .box .info h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.team .box .info p{
+    padding: 10px 0;
+    font-size: 17px;
+    font-weight: normal;
+    color: #777;
+}
+/* End TEAM MEMBERS */
