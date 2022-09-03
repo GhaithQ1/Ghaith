@@ -530,15 +530,54 @@ width: 600px;
     box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
     padding: 15px;
     background-color: white;
-    border-radius: 6px;
     overflow: hidden;
+     transition: var(--main-transition);
 }
 .gallery .container .box .image img{
     max-width: 100%;
-    border-radius: 6px;
+    
     overflow: hidden;
+     transition: var(--main-transition);
+}
+.gallery .container .box .image{
+    position: relative;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+.gallery  .box .image:hover img{
+    transform: rotate(5deg) scale(1.2);
 }
 
+.gallery .container .box .image::before{
+     content:"";
+     position: absolute;
+     width: 0;
+     height: 0;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50% , -50%);
+    background-color: rgb(255 255 255 / 30%);
+    border-radius: 10px;
+     opacity: 0;
+     z-index: 2;
+}
+
+.gallery .container .box .image:hover:before{
+    animation-name: flash;
+    animation-duration: 1s;
+}
+
+@keyframes flash{
+    0%,40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+
+}
 .spikes::after {
     content: "";
     position: absolute;
@@ -561,17 +600,35 @@ width: 600px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 }
-.features .container .img-holder img{
+
+.features .box .img-holder img{
     max-width: 100%;
+}
+.features .box .img-holder {
     position: relative;
+    overflow: hidden;
     
 }
-.features .container .img-holder img::before{
+
+.features .box .img-holder::after{
     content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 170px 500px;
+    border-color: transparent transparent white transparent;
+    transition: var(--main-transition);
 }
+
+.features .box:hover .img-holder::after{
+    border-width: 170px 500px 170px 0px;
+}
+    
+
 .features .container .box{
     border: 1px solid #d9d9d9;
-    position: relative;
+    
 }
 .features .container .box h2{
     font-size: 35px;
@@ -594,9 +651,54 @@ width: 600px;
     margin: 50px auto;
     font-size: 22px;
     font-weight: bold;
+    border-radius: 6px;
     cursor: pointer;
-    border-radius: 10px;
+    position: relative;
+    transition: var(--main-transition);
 }
+
+.features .container .quality h3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 0;
+    height: 100%;
+    background-color: #e91e63;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.features .container .time h3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 0;
+    height: 100%;
+    background-color: #ffc107;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.features .container .passion h3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 0;
+    height: 100%;
+    background-color: #03a9f4;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+
+.features .container .box:hover h3::before {
+    width: 100%;
+}
+.features .container .box:hover h3{
+    color: white;
+}
+
+
 .features .container .quality h2{
     border-bottom: 5px solid #e91e63;
 }
@@ -611,26 +713,53 @@ width: 600px;
     color: #e91e63;
     transition:var(--main-transition);
 }
-.features .container .quality h3:hover{
-    background-color: #e91e63;
-    color: white;
-}
+
 .features .container .time h3{
     border: 3px solid #ffc107;
     color: #ffc107;
     transition:var(--main-transition);
 }
-.features .container .time h3:hover{
-    background-color: #ffc107;
-    color: white;
-}
+
 .features .container .passion h3{
     border: 3px solid #03a9f4;
     color: #03a9f4;
     transition:var(--main-transition);
 }
-.features .container .passion h3:hover{
-    background-color: #03a9f4;
-    color: white;
+
+
+.features .quality .img-holder::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(233 30 99 / 50%);
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+.features .time .img-holder::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 193 7 / 50%);
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+.features .passion .img-holder::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(3 169 244 / 50%);
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+
+.features .container .quality{
+    order:4 ;
+}
+
+.features .container .time{
+    order:2 ;
 }
  /* End FEATURES  */
