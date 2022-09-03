@@ -667,48 +667,25 @@ width: 600px;
     position: relative;
     transition: var(--main-transition);
 }
-
-.features .container .quality h3::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 0;
-    height: 100%;
-    background-color: #e91e63;
-    z-index: -1;
-    transition: var(--main-transition);
+.features .container .quality h3{
+background: linear-gradient(to right,#e91e63 50%, white 50% );
+background-size: 200% 100%;
+background-position: right top;
 }
-.features .container .time h3::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 0;
-    height: 100%;
-    background-color: #ffc107;
-    z-index: -1;
-    transition: var(--main-transition);
+.features .container .time h3{
+background: linear-gradient(to right,#ffc107 50%, white 50% );
+background-size: 200% 100%;
+background-position: right top;
 }
-.features .container .passion h3::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 0;
-    height: 100%;
-    background-color: #03a9f4;
-    z-index: -1;
-    transition: var(--main-transition);
-}
-
-.features .container .box:hover h3::before {
-    width: 100%;
+.features .container .passion h3{
+background: linear-gradient(to right,#03a9f4 50%, white 50% );
+background-size: 200% 100%;
+background-position: right top;
 }
 .features .container .box:hover h3{
+    background-position: left top;
     color: white;
 }
-
 
 .features .container .quality h2{
     border-bottom: 5px solid #e91e63;
@@ -774,3 +751,55 @@ width: 600px;
     order:2 ;
 }
  /* End FEATURES  */
+
+/* start TESTIMONIALS  */
+.testimonials{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: white;
+}
+
+.testimonials .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.testimonials .box{
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    position: relative;
+}
+.testimonials .box img{
+    padding: 10px;
+    position: absolute;
+    right: -10px;
+    width: 90px;
+    top: -50px;
+    border-radius: 50%;
+    background-color: #ececec;
+}
+.testimonials .box h3{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.testimonials .box .title{
+    margin: 0 10px;
+    font-weight: 600;
+}
+.testimonials .box .rate{
+    padding: 10px 20px;
+}
+.testimonials .box p{
+    padding: 10px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.testimonials .box .rate .filled{
+    color: #ffc107;
+}
+
+/* End TESTIMONIALS  */
