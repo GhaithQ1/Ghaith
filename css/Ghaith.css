@@ -367,7 +367,16 @@ width: 600px;
     width: 100%;
     position: absolute;
     left: 0;
+    
     }
+    @keyframes imgs{
+    0%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(-200px);
+    }
+}
 }
 
 .landing .container .text{
@@ -796,7 +805,7 @@ background-position: right top;
     padding: 10px 20px;
 }
 .testimonials .box p{
-    padding: 10px;
+    padding: 5px 10px;
     font-size: 17px;
     font-weight: normal;
     color: #777;
