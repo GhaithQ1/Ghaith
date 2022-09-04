@@ -463,7 +463,7 @@ width: 600px;
 
 .articles .box:hover{
     transform: translateY(-10px);
-    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
 }
 .articles .box img{
     max-width: 100%;
@@ -548,7 +548,7 @@ width: 600px;
 }
 
 .gallery .container .box{
-    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     padding: 15px;
     background-color: white;
     overflow: hidden;
@@ -777,7 +777,7 @@ background-position: right top;
     gap: 40px;
 }
 .testimonials .box{
-    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     border-radius: 10px;
     position: relative;
     background-color: white;
@@ -926,7 +926,7 @@ background-position: right top;
     gap: 40px;
 }
 .services .container .box{
-    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     background-color: white;
     position: relative;
 }
