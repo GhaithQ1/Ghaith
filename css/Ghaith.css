@@ -65,7 +65,6 @@ a{
     }
 }
 
-
 .main-text{
     position: relative;
     border: 2px solid black;
@@ -144,6 +143,21 @@ a{
     border-color: white;
     transition-delay: 0.5s;
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+ }
+ 
+ 
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--main-color), var(--color-tow));
+  border-radius: 1rem;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(270deg, var(--main-color), var(--color-tow));
+}
+ 
 
 /* End global rules */
 /* start header */
@@ -1159,3 +1173,188 @@ color: #777;
 }
 
  /* End HOW IT WORKS  */
+/* start LATEST EVENTS */
+.events{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+.events .img-up{
+    position: absolute;
+    right: 0;
+    top: 160px;
+}
+.events .img-down{
+    position: absolute;
+    bottom: 100px;
+}
+
+@media(max-width:991px){
+    .events .img-up,
+    .events .img-down{
+        display: none;
+    }
+}
+.events img{
+    max-width: 450px;
+}
+@media(max-width:991px){
+    .events img{
+    margin: auto;
+    }
+}
+@media(max-width:767px){
+    .events img{
+        max-width: 200px;
+    }
+}
+
+.events .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.events .info{
+flex: 1;
+}
+.events .info .tame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.events .info .tame .unt{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d4d4d4;
+    text-align: center;
+    margin: 0 10px 25px;
+    width: fit-content;
+    border-radius: 5px;
+    transition:var(--main-transition);
+}
+@media(max-width:767px){
+    .events .info{
+    max-width: 100%;
+    }
+}
+.events .info .tame .unt:hover{
+    border-color: var(--main-color);
+}
+
+.events .info .tame .unt .days{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 17px;
+}
+@media(max-width:767px){
+    .events .info .tame .unt .days{
+    font-size: 25px;
+    }
+}
+.events .info .tame .unt .name-days{
+    font-size: 12px;
+    border-top: 1px solid #d4d4d4;
+    padding: 7px 5px 5px 5px;
+    transition: var(--main-transition);
+}
+.events .info .tame .unt:hover .name-days{
+    border-color: var(--main-color);
+}
+
+.events .info .title{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 15px 0;
+}
+.events .info .description{
+    font-size: 15px;
+    font-weight: normal;
+    color: #777;
+    line-height: 1.6;
+    text-align: center;
+}
+@media(max-width:767px){
+    .events .info .title{
+        text-align: center;
+        font-size: 20px;
+    }
+}
+@media(max-width:767px){
+    .events .info .description{
+        text-align: center;
+        max-width: 100%;
+    }
+}
+.events .subsc{
+    width: 100%;
+    margin-top: 50px;
+}
+.events .subsc form{
+    width: 600px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    background-color: #f6f5f5;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
+}
+.events .subsc form input[type="email"]{
+    width: 400px;
+    height: 60px;
+    border-radius: 30px;
+    border-style: none;
+    caret-color: var(--main-color);
+    padding: 10px 10px 10px 20px;
+    outline: none;
+    transition: var(--main-transition);
+}
+
+@media(max-width:767px){
+    .events .subsc form input[type="email"]{
+        width: 100%;
+    }
+}
+
+.events .subsc form input[type="submit"]{
+    width: 125px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    color: white;
+    border-style: none;
+    cursor: pointer;
+    transition: var(--main-transition);
+    outline: none;
+    z-index: 1;
+}
+@media(max-width:767px){
+    .events .subsc form input[type="submit"]{
+    width: 110px;
+    height: 40px;
+    margin: auto;
+    }
+}
+@media(max-width:767px){
+    .events .subsc form{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+}
+.events .subsc form:hover input[type="submit"]{
+    background-color: var(--color-tow);
+}
+
+.events .subsc form ::placeholder{
+color: #777;
+transition: var(--main-transition);
+}
+.events .subsc form :hover::placeholder{
+color: white;
+}
+
+/* End LATEST EVENTS */
