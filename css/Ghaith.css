@@ -1068,7 +1068,7 @@ flex: 1;
 
 @media(max-width:991px){
     .main-skills .container .skills{
-        max-width: 100%;
+            width: 100%;
     }
 }
 .main-skills .container .skills .skill .the-progress span{
