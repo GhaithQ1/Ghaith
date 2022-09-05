@@ -1533,7 +1533,7 @@ color: white;
     border: 1px solid #ccc;
     border-radius: 6px;
 }
-@media(max-width:767px){
+@media(max-width:991px){
     .videos .main-box{
         display: flex;
         flex-direction: column;
