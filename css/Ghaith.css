@@ -943,7 +943,14 @@ background-position: right top;
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
     background-color: white;
     position: relative;
+    transition: var(--main-transition);
 }
+
+.services .container .box:hover{
+    transform: translateY(-10px);
+}
+
+
 @media(max-width:767px){
     .services .container .box{
         width: 100%;
@@ -1028,6 +1035,12 @@ background-position: right top;
     gap: 20px;
 
 }
+@media(max-width:991px){
+    .main-skills .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 .main-skills .container .skills{
 padding: 20px;
@@ -1043,7 +1056,7 @@ flex: 1;
 }
 @media(max-width:991px){
     .main-skills .container img{
-        display: none;
+        max-width: 100%;
     }
 }
 .main-skills .container .skills .skill .the-progress{
@@ -1051,6 +1064,12 @@ flex: 1;
     background-color: var(--section-color);
     position: relative;
     border-radius: 10px;
+}
+
+@media(max-width:991px){
+    .main-skills .container .skills{
+        max-width: 100%;
+    }
 }
 .main-skills .container .skills .skill .the-progress span{
     position: absolute;
@@ -1061,6 +1080,7 @@ flex: 1;
     transition: width 0.5s linear;
     border-radius: 10px;
 }
+
 .main-skills .container .skill .ox {
     position: absolute;
     right: 16px;
@@ -1205,7 +1225,8 @@ color: #777;
 }
 @media(max-width:767px){
     .events img{
-        max-width: 200px;
+        max-width: 100%;
+        margin: 0 0 20px 0;
     }
 }
 
