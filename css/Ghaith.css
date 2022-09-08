@@ -878,7 +878,7 @@ background-position: right top;
     border-radius: 10px;
     transition: var(--main-transition);
 }
-.team .box .data:hover img{
+.team .box:hover img{
     filter: grayscale(100%);
 }
 
@@ -1764,6 +1764,7 @@ color: white;
     margin: 20px;
     border: none;
     border-bottom: 1px solid #ccc;
+    border-radius: 10px;
     background: #f9f9f9;
     outline: none;
     width: 100%;
@@ -1823,7 +1824,7 @@ color: white;
     height: 50px;
     font-size: 20px;
     transition: var(--main-transition);
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     cursor: pointer;
 }
 .footer .box-onw .so .facebook i:hover{
@@ -1850,13 +1851,14 @@ color: white;
     padding: 0 10px 15px 0;
     margin: 0px 0 20px;
     transition: var(--main-transition);
+    
 }
 
 .footer ul li a{
     color: rgb(255 255 255 / 50%);
     transition: var(--main-transition);
 }
-.footer ul li a:hover{
+.footer ul li:hover a{
     color: white;
     padding-left: 10px;
 }
