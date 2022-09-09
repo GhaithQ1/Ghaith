@@ -1786,6 +1786,10 @@ color: white;
     color: wheat;
     text-align: center;
     border-radius: 6px;
+    cursor: pointer;
+}
+.discount form input[type="submit"]:hover{
+    background-color: var(--color-tow);
 }
  /* End Discount */
  /* start footer */
