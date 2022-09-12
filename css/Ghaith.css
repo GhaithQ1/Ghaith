@@ -399,6 +399,7 @@ a {
   -webkit-animation: tes 3s steps(21) 1s both, bor 1s infinite;
   overflow: hidden;
   white-space: nowrap;
+  margin: 26px auto;
 }
 @keyframes tes {
   form{
